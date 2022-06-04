@@ -36,7 +36,7 @@ def wynik():
         l1 = int(request.form["l1"])
         l2 = int(request.form["l2"])
     except:
-        return "Wpisz liczby, debilu!"
+        return "Możesz wpisać tylko liczby!"
     operacja = request.form["operacja"]
     if operacja == "dodawanie":
         return str(l1 + l2)
@@ -48,7 +48,7 @@ def wynik():
         try:
             return str(l1 / l2)
         except ZeroDivisionError:
-            return "Nie wolno dzielić przez 0, debilu!"
+            return "Nie wolno dzielić przez 0!"
 
 
 app.run(port=5202)
